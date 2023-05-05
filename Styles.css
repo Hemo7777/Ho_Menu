@@ -1,0 +1,394 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700italic);
+
+:root{
+  --piv: 0.09259259259259259vh;
+}
+
+/* القائمة */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#Menu_Headers {
+  position: absolute;
+
+  cursor: move;
+  z-index: 10;
+  text-align: center;
+}
+
+#Menu_Settings {
+  position: absolute;
+  width: 35%; /* العرض */
+  height: 30%; /* الطول */
+
+  left: 2%;
+  top: 3.5%;
+  z-index: 999999;
+  background: #00000087;
+  border-radius: 2vh;
+  padding: 1%;
+  color: white;
+  display: none;
+  transition: 400ms width, 400ms height;
+  overflow: hidden;
+}
+
+#Menu_Settings:hover {
+  border-color: white;
+  cursor: default;
+}
+
+/* اسم القائمة */
+
+.HeaderName_1 {
+  font-weight: 700;
+  font-size: calc(var(--piv) * 45.33);
+  margin-top: 1px;
+  background: radial-gradient(50% 50% at 50% 50%, #21FFC0 0%, rgba(33, 255, 192, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: calc(var(--piv) * 1.4);
+  -webkit-text-stroke-color: #21FFC0;
+  filter: drop-shadow(-5px -5px 20px rgba(45, 218, 166, 1))
+}
+
+.HeaderName_2{
+  font-weight: 400;
+  margin-left: 40px;
+  font-size: calc(var(--piv) * 13);
+  letter-spacing: 0.465em;
+  filter: drop-shadow(-5px -5px 20px rgba(255, 255, 255, 1))
+}
+
+.Close_Settings{
+  position: absolute;
+  top: calc(var(--piv) * 30);
+  right: calc(var(--piv) * 30);
+  width: calc(var(--piv) * 30);
+  height: calc(var(--piv) * 30);
+  vertical-align: middle;
+  
+  filter: drop-shadow(-5px -5px 20px rgba(255, 67, 67, 1));
+  cursor: pointer;
+}
+
+/* الالوان */
+
+.ColorPicker {
+ 
+  position: absolute;
+  left: 5%;
+  top: 31%;
+}
+
+/* ازرار القوائم */
+
+.Settings_Menus-buttons{
+  display: inline-flex;
+  margin-top: 50px;
+  margin-left: -3.9px;
+  gap: calc(var(--piv) * 7);
+}
+  
+.Settings_Menus-buttons button{
+  
+  height: calc(var(--piv) * 37);
+  border-radius: calc(var(--piv) * 9);
+
+  cursor: pointer;
+  transition: .15s;
+  
+  font-size: calc(var(--piv) * 12);
+  font-family: 'Tajawal', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.Settings_Menus-buttons button.yellow{
+  width: calc(var(--piv) * 108);
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(218, 170, 45, 0.25) 0%, rgba(218, 170, 45, 0.00130208) 100%);
+  border: calc(var(--piv) * 1) solid rgb(218, 170, 45);
+  filter: drop-shadow(-5px -5px 20px rgba(218, 170, 45, 1))
+}
+
+.Settings_Menus-buttons button.yellow:hover{
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(218, 170, 45, 1) 0%, rgba(218, 170, 45, 0.00130208) 100%);
+}
+
+.Settings_Menus-buttons button.yellow:focus{
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(218, 170, 45, 1) 0%, rgba(218, 170, 45, 0.00130208) 100%);
+}
+
+
+/* ايقاف تشغيل الانميشن ~ زر المشاركة ~ اعادة التعيين */
+  
+.Settings_Menus_other-buttons{
+  display: grid;
+  margin-top: 50px;
+  margin-left: 500px;
+  gap: calc(var(--piv) * 7);
+}
+
+.Settings_Menus_other-buttons button{
+
+  height: calc(var(--piv) * 37);
+  border-radius: calc(var(--piv) * 9);
+
+  cursor: pointer;
+  transition: .15s;
+
+  font-size: calc(var(--piv) * 12);
+  font-family: 'Tajawal', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.Settings_Menus_other-buttons button.green{
+  width: calc(var(--piv) * 150);
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(45, 218, 166, 0.25) 0%, rgba(45, 218, 166, 0) 100%);
+  border: calc(var(--piv) * 1) solid #2ddaa6;
+  filter: drop-shadow(-5px -5px 20px rgba(45, 218, 166, 1))
+}
+
+.Settings_Menus_other-buttons button.green:hover{
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(45, 218, 166, 1) 0%, rgba(45, 218, 166, 0) 100%);
+
+}
+
+.Settings_Menus_other-buttons button.green:focus{
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(45, 218, 166, 1) 0%, rgba(45, 218, 166, 0) 100%);
+}
+  
+/*  */
+  
+.Settings_Menus_other2-buttons{
+  display: grid;
+  margin-top: -212px;
+  margin-left: 312px;
+  gap: calc(var(--piv) * 7);
+}
+
+.Settings_Menus_other2-buttons button{
+  
+  height: calc(var(--piv) * 37);
+  border-radius: calc(var(--piv) * 9);
+
+  cursor: pointer;
+  transition: .15s;
+  
+  font-size: calc(var(--piv) * 12);
+  font-family: 'Tajawal', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.Settings_Menus_other2-buttons button.purple{
+  width: calc(var(--piv) * 150);
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(45, 218, 166, 0.25) 0%, rgba(45, 218, 166, 0) 100%);
+  border: calc(var(--piv) * 1) solid #2DDAA6;
+  filter: drop-shadow(-5px -5px 20px rgba(45, 218, 166, 1))
+}
+
+.Settings_Menus_other2-buttons button.purple:hover{
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(45, 218, 166, 1) 0%, rgba(45, 218, 166, 0) 100%);
+}
+
+.Settings_Menus_other2-buttons button.purple:focus{
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(45, 218, 166, 1) 0%, rgba(45, 218, 166, 0) 100%);
+}
+
+#Text {
+  display: none;
+  position: fixed;
+  font-family: 'Tajawal', sans-serif;
+  color: #fff;
+  font-weight: 300;
+  font-size: 20.8px;
+  left: 41.8%;
+  top: 80.6%;
+}
+
+#countdown {
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	user-select: none;
+
+	width: 200px;
+	height: 100px;
+	
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	margin-left: -100px;
+	margin-top: -50px;
+	
+	color: rgb(255,255,255);
+	text-shadow: 3px 0 3px rgba(0,0,0,.3), 0 3px 3px rgba(0,0,0,.3), -3px 0 3px rgba(0,0,0,.3), 0 -3px 3px rgba(0,0,0,.3);
+	
+	font-size: 5em;
+	transition: all 0.45s ease 0s;
+}
+
+/* Jails */
+
+#In_Jail {
+  display: none;
+}
+
+._In_Jail { 
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0%;
+  top: 0%;
+}
+
+.In_Jail_E { 
+  position: absolute;
+  width: 993px;
+  height: 978px;
+  left: 50%;
+  top: 31%;
+  filter: blur(405px);
+}
+
+.In_Jail_Img { 
+  position: fixed;
+  animation: fade-in 2s linear;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.In_Jail_Img { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 13px;
+}
+
+.In_Jail_Img Img { 
+  width: 50px;
+  height: 50px;
+}
+
+.xText_0 {
+  position: relative;
+  animation: fade-in 2s linear;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  color: #5f0d0d;
+  text-shadow: 0px 0px 15px #5f0d0dd2;
+  margin-top: 10px;
+  white-space: nowrap;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.xText_1 { 
+  position: relative;
+  animation: fade-in 2s linear;
+  font-size: 0.7vw;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 15px #ffffff80;
+  margin-top: 10px;
+  white-space: nowrap;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.xText_2 { 
+  position: relative;
+  animation: fade-in 2s linear;
+  font-size: 0.6vw;
+  text-transform: uppercase;
+  color: #5f0d0d;
+  text-shadow: 0px 0px 15px #5f0d0dd2;
+  white-space: nowrap;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+h1 { 
+  font-family: 'Alexandria', sans-serif;
+  top: 70%;
+}
+
+.In_Jail_H { 
+  position: absolute;
+  left: 50%;
+  margin-top: 15%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: auto;
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes brezel-updown {
+  0% {top: 85%}
+  50% {top: 82.5%}
+  100% {top: 85%}
+}
+
+/* DrawTextLine */
+
+.DrawTextLine{
+  display: none;
+  position: absolute;
+  bottom: 10.5vh;
+  left: 0vh;
+  width: 100%;
+  height: 4%;
+  text-align: center;
+  text-transform: uppercase;
+  text-align: center;
+  animation: drawing 1.8s ease infinite;
+  transform: scale(1.0);
+  font-size: 19px;
+  white-space: nowrap;
+  color: #ffffff;
+  font-family: 'Tajawal', Helvetica, Arial, sans-serif;
+}
+
+@keyframes drawing {
+  0% {
+      opacity: 1;
+      transform: scale(1.06);
+  }
+  10% {
+      opacity: 1;
+      transform: scale(1.0);
+  }
+  20% {
+      opacity: 0.85;
+      transform: scale(1.06);
+  }
+  30% {
+      opacity: 0.85;
+      transform: scale(1.0);
+  }
+}
